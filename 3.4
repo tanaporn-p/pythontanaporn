@@ -1,0 +1,29 @@
+# pythontanaporn
+print('mail shop')
+def menu():
+    global mail
+    print('add [a]')
+    print('present [s]')
+    print('exit [x]')
+    mail=str(input(' '))
+def data():
+    global name
+    name=(input('id:name:city:'))
+    print('*****ข้อมูลได้รับเข้าสู่ระบบแล้ว*****')
+def show():
+    print('_'*10)
+    print('id--name-----city')
+    print('_'*10)
+    print('%s'%name)
+
+        
+while True:
+    menu()
+    if mail == 'a':
+        data()
+    if mail == 's':
+        show()
+    if mail == 'x':
+        d=str(input('out (y/n):'))
+        if d == 'y':
+            break
