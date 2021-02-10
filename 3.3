@@ -1,0 +1,14 @@
+a=1
+fds=[]
+print('ป้อนชื่ออาหารสุดโปรดของคุณหรือ exit เพื่อออกจากโปรแกรม')
+for i in range (0,99):
+   fd=str(input('อาหารจานโปรดจานที่ %d'%a))
+   fds.append(fd)
+   a=a+1
+   if fd == 'exit':
+       a=0
+       break
+print('หาหารจานโปรดมีดังนี้')
+for i in range (0,len(fds)-1):
+    a=a+1
+    print('%d'%a,fds[i])
