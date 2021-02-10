@@ -1,0 +1,36 @@
+# pythontanaporn
+sale,product =[2000,1000,300,250,],['louis vuitton mirror','louis vuitton A++','louis vuitton b','louis vuitton c']
+class shop:
+    def __init__(self,product,sale):
+        self.sale =  sale=[]
+        self.product = product=[]
+    def addproduct(self):
+        print('*'*10,'add','*'*10)
+        for i in range (0,99):
+            zen=str(input('add name =>'))
+            lak=int(input('price%s=>'%zen))
+            product.append(zen)
+            sale.append(lak)
+            st=str(input('add product yes/no :'))
+            if st == 'yes':
+                break
+    def show (self):
+        print('*'*10,'show product','*'*10)
+        for x in range (0,len(product)):
+            print('[%d]'%x,product[x],sale[x])
+def menu():
+    global mail
+    print('*'*10,'mail shop','*'*10)
+    print('1. show  [s]\n2.add  [a] \n3.exit       [x]')
+    mail=str(input(' '))
+x= shop(['louis vuitton mirror','louis vuitton A++','louis vuitton b','louis vuitton c'],[2000,1000,300,250,])
+while True :
+    menu()
+    if mail == 's':
+        x.show()
+    if mail == 'a':
+        x.addproduct()
+    if mail == 'x':
+        ex=str(input('ต้องการออกจากโปรแกรมหรือไม่ y/n'))
+        if ex =='y':
+            break
