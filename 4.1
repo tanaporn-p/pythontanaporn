@@ -1,0 +1,90 @@
+# pythontanaporn
+m = 0
+n = 0
+annie = ['candy','snack','sweet','lay','cake']
+sell = [2,5,10,19,59]
+sumsell = [0,0,0,0,0]
+sell2 = [0,0,0,0,0]
+print('\tshopping online')
+print('-'*30)
+def shop():
+    print('*'*30)
+    global mai
+    print('1.showproduct')
+    print('2.pick up')
+    print('3.showproductinbag')
+    print('4.exit')
+    mai = (input(' '))
+
+def menu() :
+    print('\t[1]showproduct')
+    print('-'*30)
+    for x in range (0,5) :
+        print(annie[x],'price',sell[x],'baht')
+
+def bag1() :
+    print('\t[2]pick up')
+    for x in range (0,5) :
+        print('[%d]'%x,annie[x],'price',sell[x],'baht')
+    print('or click 11 for exit')
+    for x in range (0,99) :
+        bb = int(input('pick a number'))
+        if bb == 0 :
+            bb0()
+        if bb == 1 :
+            bb1()
+        if bb == 2 :
+            bb2()
+        if bb == 3 :
+            bb3()
+        if bb == 4 :
+            bb4()
+        if bb == 11 :
+            break
+
+def bb0():
+    sum = int(input('amountcandy'))
+    sumsell[0]+=sum
+    sell[0]*=sum
+    sell2[0]+=sell[0]
+
+def bb1():
+    sum = int(input('amountsnack'))
+    sumsell[1]+=sum
+    sell[1]*=sum
+    sell2[1]+=sell[1]
+
+def bb2():
+    sum = int(input('amountsweet'))
+    sumsell[2]+=sum
+    sell[2]*=sum
+    sell2[2]+=sell[2]
+
+def bb3():
+    sum = int(input('amountlay'))
+    sumsell[3]+=sum
+    sell[3]*=sum
+    sell2[3]+=sell[3]
+
+def bb4():
+    sum = int(input('amountcake'))
+    sumsell[4]+=sum
+    sell[4]*=sum
+    sell2[4]+=sell[4]
+
+def inbag():
+    print('pick up number 3\t\n------show product------')
+    for x in range(0,5) :
+        print(annie[x],'____amount',sumsell[x],'piece____price',sell2[x],'baht')
+    print('price all =>',sell2[0]+sell2[1]+sell2[2]+sell2[3]+sell2[4],'baht')
+
+while True :
+    shop()
+    if mai == '1':
+        menu()
+    if mai == '2':
+        bag1()
+    if mai == '3':
+        inbag()
+    if mai == '4':
+        break
